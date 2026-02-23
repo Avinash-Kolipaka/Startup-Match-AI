@@ -1,0 +1,25 @@
+{
+  "name": "groupproject-startupmatch",
+  "version": "1.0.0",
+  "description": "A production-ready MERN SaaS application to connect startup founders using AI-driven matching algorithms, real-time chat, and a project marketplace.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+  "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tejpraval/groupProject-startupmatch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Tejpraval/groupProject-startupmatch/issues"
+  },
+  "homepage": "https://github.com/Tejpraval/groupProject-startupmatch#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
