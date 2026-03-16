@@ -1,9 +1,9 @@
 const express = require('express');
-const cors = require('cors');
-const helmet = require('helmet');
-const morgan = require('morgan');
-const rateLimit = require('express-rate-limit');
-const { errorHandler } = require('./middleware/errorHandler');
+const cors = require('cors');  //connect apis frontend b to f
+const helmet = require('helmet'); //react lib use for security purpose
+const morgan = require('morgan'); //loging routes or req in terminal
+const rateLimit = require('express-rate-limit'); //limit for certain time
+const { errorHandler } = require('./middleware/errorHandler'); //shows errors in console
 
 // Route imports
 const authRoutes = require('./modules/auth/auth.routes');
