@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
             try {
                 const token = localStorage.getItem('token');
                 if (token) {
-                    const { data } = await api.get('/auth/me');
+                    const { data } = await api.get('/api/auth/me');
                     setUser(data.data);
                 }
             } catch (error) {
@@ -27,14 +27,14 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const login = async (email, password) => {
-        const { data } = await api.post('/auth/login', { email, password });
+        const { data } = await api.post('/api/auth/login', { email, password });
         localStorage.setItem('token', data.data.token);
         setUser(data.data.user);
         return data;
     };
 
     const register = async (email, password, role) => {
-        const { data } = await api.post('/auth/register', { email, password, role });
+        const { data } = await api.post('/api/auth/register', { email, password, role });
         localStorage.setItem('token', data.data.token);
         setUser(data.data.user);
         return data;
